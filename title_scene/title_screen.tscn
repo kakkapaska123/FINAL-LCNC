@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://c76v8fympc5st"]
+
+[ext_resource type="Texture2D" uid="uid://cah6l17r3hmyw" path="res://title_scene/menuscreen_kesken_pupulla_2560x1440.png" id="1_8slea"]
+[ext_resource type="Script" path="res://title_scene/title_scene.gd" id="2_tntut"]
+[ext_resource type="PackedScene" uid="uid://clhojtjtk345w" path="res://Levels/player_spawn.tscn" id="3_7ovdc"]
+[ext_resource type="Texture2D" uid="uid://c5yxqpm0oswyj" path="res://title_scene/pupupelilogo.png" id="3_mmpke"]
+
+[node name="TitleScreen" type="Sprite2D"]
+position = Vector2(120, 67)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("1_8slea")
+script = ExtResource("2_tntut")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.415, 0.415)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 84.3374
+offset_top = 74.6988
+offset_right = -26.6627
+offset_bottom = 101.699
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.415, 0.415)
+color = Color(0.29219, 0.29219, 0.29219, 0.298039)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(180.723, 106.024)
+scale = Vector2(0.344898, 0.344898)
+texture = ExtResource("3_mmpke")
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 151.807
+offset_top = 132.53
+offset_right = 302.807
+offset_bottom = 178.53
+scale = Vector2(0.415, 0.415)
+theme_override_font_sizes/font_size = 20
+text = "uusi peli"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 151.807
+offset_top = 161.446
+offset_right = 302.807
+offset_bottom = 206.446
+scale = Vector2(0.415, 0.415)
+theme_override_font_sizes/font_size = 20
+text = "jatka peliä"
+
+[node name="PlayerSpawn" parent="CanvasLayer/Control" instance=ExtResource("3_7ovdc")]
+position = Vector2(202.41, 108.434)
+scale = Vector2(0.225904, 0.225904)

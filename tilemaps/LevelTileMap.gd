@@ -3,7 +3,7 @@ class_name LevelTileMap extends TileMap
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	LevelManager.ChangeTilemapBounds( GetTilemapBounds() )
+	LevelManager.change_tilemap_bounds( GetTilemapBounds() )
 	pass # Replace with function body.
 
 

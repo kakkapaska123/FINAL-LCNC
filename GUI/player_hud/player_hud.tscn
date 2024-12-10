@@ -16,6 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control"]
+visible = false
 position = Vector2(15, 6)
 texture = ExtResource("1_rd7gs")
 region_enabled = true
@@ -23,8 +24,10 @@ region_rect = Rect2(0, 0, 27, 9)
 
 [node name="HFlowContainer" type="HFlowContainer" parent="Control"]
 layout_mode = 0
-offset_right = 130.0
-offset_bottom = 22.0
+offset_left = -37.0
+offset_top = 2.0
+offset_right = 93.0
+offset_bottom = 24.0
 theme_override_constants/h_separation = 4
 theme_override_constants/v_separation = 2
 alignment = 1

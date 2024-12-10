@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://clhojtjtk345w"]
+
+[ext_resource type="Script" path="res://Levels/scriptit/player_spawn.gd" id="1_gltgr"]
+[ext_resource type="Texture2D" uid="uid://bbcisor8uxq1u" path="res://player/assetit/bunny_animations.png" id="1_o5mgc"]
+
+[node name="PlayerSpawn" type="Node2D"]
+script = ExtResource("1_gltgr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(3.56168e-06, 0.526832, 0.198095, 1)
+position = Vector2(-1, -18)
+texture = ExtResource("1_o5mgc")
+hframes = 6
+vframes = 10

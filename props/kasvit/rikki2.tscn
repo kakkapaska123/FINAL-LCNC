@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://csviscwif7gs7"]
+
+[ext_resource type="Texture2D" uid="uid://kpc0wm3pmv3l" path="res://props/kasvit/Atlas-Props-sheet1.png" id="1_20ov1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_71vnl"]
+radius = 4.0
+height = 16.0
+
+[node name="rikki" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_20ov1")
+region_enabled = true
+region_rect = Rect2(864, 635, 31, 38)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_71vnl")
