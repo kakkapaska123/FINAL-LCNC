@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 const START_LEVEL : String = "res://playground.tscn"
 
@@ -23,6 +23,8 @@ func _ready() -> void:
 	#$CanvasLayer/SplashScene.finished.connect( setup_title_screen )
 	
 	LevelManager.level_load_started.connect( exit_title_screen )
+	
+	setup_title_screen()
 	
 	pass
 

@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw48hrcync82b"]
+
+[ext_resource type="Script" path="res://Levels/scriptit/level.gd" id="1_wggb8"]
+[ext_resource type="AudioStream" uid="uid://m5snrpncb6jl" path="res://Levels/music/Nothappymusic.mp3" id="2_e6s8j"]
+[ext_resource type="PackedScene" uid="uid://bvm31e2t6k24b" path="res://tilemaps/plains.tscn" id="2_jugjk"]
+[ext_resource type="PackedScene" uid="uid://clhojtjtk345w" path="res://Levels/player_spawn.tscn" id="3_hfdnd"]
+[ext_resource type="PackedScene" uid="uid://b8ngqtyq5lhr6" path="res://Levels/level_transition.tscn" id="4_frrcv"]
+
+[node name="3Talo" type="Node2D"]
+position = Vector2(-32, 0)
+script = ExtResource("1_wggb8")
+music = ExtResource("2_e6s8j")
+
+[node name="Plains" parent="." instance=ExtResource("2_jugjk")]
+layer_0/tile_data = PackedInt32Array(131073, 2, 0, 131074, 65538, 0, 131075, 65538, 0, 131076, 65538, 0, 131077, 65538, 0, 131078, 65538, 0, 131079, 65538, 0, 196615, 262146, 1, 262151, 262146, 1, 327687, 262146, 1, 393222, 196610, 1, 393223, 196610, 1, 393221, 196610, 1, 393220, 196610, 1, 393219, 262146, 1, 393218, 196610, 1, 327681, 2, 1, 393217, 2, 1, 262145, 2, 1, 196609, 2, 1, 196610, 196610, 1, 262146, 196610, 1, 196611, 262146, 1, 262147, 196610, 1, 262148, 262146, 1, 262149, 262146, 1, 196613, 196610, 1, 196612, 262146, 1, 196614, 262146, 1, 262150, 196610, 1, 327685, 196610, 1, 327686, 196610, 1, 327683, 262146, 1, 327684, 262146, 1, 327682, 196610, 1, 1, 7, 0, 65537, 7, 1, 2, 65543, 0, 65538, 65543, 1, 3, 65543, 0, 65539, 65543, 1, 4, 65543, 0, 65540, 65543, 1, 5, 65543, 0, 65541, 65543, 1, 6, 65543, 0, 65542, 65543, 1, 131080, 131074, 0, 393224, 131074, 1, 262152, 131074, 1, 327688, 131074, 1, 196616, 131074, 1, 7, 65543, 268435456, 65543, 65543, 268435457, 8, 65543, 268435456, 65544, 65543, 268435457, 458753, 2, 2, 458754, 65538, 2, 458755, 65538, 2, 458756, 65538, 2, 458757, 65538, 2, 458758, 65538, 2, 458759, 65538, 2, 458760, 131074, 2)
+layer_1/tile_data = PackedInt32Array(2, 65543, 268435456, 65538, 65543, 268435457, 3, 65543, 268435456, 65539, 65543, 268435457, 4, 65543, 268435456, 65540, 65543, 268435457, 5, 65543, 268435456, 65541, 65543, 268435457, 6, 65543, 268435456, 65542, 65543, 268435457, 7, 65543, 0, 65543, 65543, 1, 8, 7, 268435456, 65544, 7, 268435457)
+layer_2/name = "Layer2"
+layer_2/tile_data = PackedInt32Array(6, 10, 536870912, 3, 10, 536870912)
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("3_hfdnd")]
+position = Vector2(161, 238)
+
+[node name="LevelTransition" parent="." instance=ExtResource("4_frrcv")]
+position = Vector2(159, 254)
+level = "res://Levels/Area2/2.tscn"
+target_transition_area = "LevelTransition2"
+size = 4
+side = 3

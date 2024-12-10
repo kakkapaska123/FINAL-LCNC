@@ -10,13 +10,15 @@ config_version=5
 
 [application]
 
-config/name="peli"
+config/name="Tweaking Tales"
+config/description="TWIIKKERI PUPU KRÄÄHÄHÄÄH"
 run/main_scene="res://title_scene/title_screen.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://player/assetit/pupupelilogo2.png"
 
 [autoload]
 
+AudioManager="*res://00_Globals/global_audio_manager.gd"
 LevelManager="*res://00_Globals/GlobalLevelManager.gd"
 PlayerHud="*res://GUI/player_hud/player_hud.tscn"
 PlayerManager="*res://00_Globals/global_player_manager.gd"

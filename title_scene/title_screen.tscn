@@ -3,13 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://cah6l17r3hmyw" path="res://title_scene/menuscreen_kesken_pupulla_2560x1440.png" id="1_8slea"]
 [ext_resource type="Script" path="res://title_scene/title_scene.gd" id="2_tntut"]
 [ext_resource type="PackedScene" uid="uid://clhojtjtk345w" path="res://Levels/player_spawn.tscn" id="3_7ovdc"]
-[ext_resource type="Texture2D" uid="uid://c5yxqpm0oswyj" path="res://title_scene/pupupelilogo.png" id="3_mmpke"]
+[ext_resource type="Texture2D" uid="uid://b0ubpm4h53kb3" path="res://title_scene/tweakingtales.png" id="3_nemjv"]
 
-[node name="TitleScreen" type="Sprite2D"]
-position = Vector2(120, 67)
+[node name="TitleScreen" type="Node2D"]
 scale = Vector2(0.09375, 0.09375)
-texture = ExtResource("1_8slea")
 script = ExtResource("2_tntut")
+
+[node name="MenuscreenKeskenPupulla2560x1440" type="Sprite2D" parent="."]
+position = Vector2(949.333, 746.667)
+scale = Vector2(1.26574, 1.26574)
+texture = ExtResource("1_8slea")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -19,13 +22,16 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 2.0
-offset_bottom = -6.0
+offset_left = -57.0
+offset_top = -5.0
+offset_right = -57.0
+offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.415, 0.415)
+scale = Vector2(0.7, 0.7)
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,26 +46,28 @@ scale = Vector2(0.415, 0.415)
 color = Color(0.29219, 0.29219, 0.29219, 0.298039)
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control"]
-position = Vector2(180.723, 106.024)
-scale = Vector2(0.344898, 0.344898)
-texture = ExtResource("3_mmpke")
+position = Vector2(211.429, 95.7143)
+scale = Vector2(0.503876, 0.503876)
+texture = ExtResource("3_nemjv")
+region_enabled = true
+region_rect = Rect2(104, 102, 287, 125)
 
 [node name="Button" type="Button" parent="CanvasLayer/Control"]
 layout_mode = 0
-offset_left = 151.807
-offset_top = 132.53
-offset_right = 302.807
-offset_bottom = 178.53
+offset_left = 180.0
+offset_top = 132.857
+offset_right = 331.0
+offset_bottom = 178.857
 scale = Vector2(0.415, 0.415)
 theme_override_font_sizes/font_size = 20
 text = "uusi peli"
 
 [node name="Button2" type="Button" parent="CanvasLayer/Control"]
 layout_mode = 0
-offset_left = 151.807
-offset_top = 161.446
-offset_right = 302.807
-offset_bottom = 206.446
+offset_left = 180.0
+offset_top = 157.143
+offset_right = 331.0
+offset_bottom = 202.143
 scale = Vector2(0.415, 0.415)
 theme_override_font_sizes/font_size = 20
 text = "jatka peliä"

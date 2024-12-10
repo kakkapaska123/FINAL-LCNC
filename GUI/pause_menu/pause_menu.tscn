@@ -1,12 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://cx2ht3phwbs52"]
+[gd_scene load_steps=8 format=3 uid="uid://cx2ht3phwbs52"]
 
 [ext_resource type="Script" path="res://GUI/pause_menu/pause_menu.gd" id="1_q7e48"]
+[ext_resource type="Texture2D" uid="uid://cj1ekfpvf42h0" path="res://items/sprites/items.png" id="2_cdd72"]
+[ext_resource type="Script" path="res://GUI/pause_menu/inventory/scripts/inventory_ui.gd" id="3_8bw4e"]
+[ext_resource type="PackedScene" uid="uid://day263d62pheo" path="res://GUI/pause_menu/inventory/inventory_slot.tscn" id="3_ws6m4"]
+[ext_resource type="Resource" uid="uid://b1wxyio6m812" path="res://GUI/pause_menu/inventory/player_inventory.tres" id="4_xqphd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxqgu"]
+atlas = ExtResource("2_cdd72")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qda15"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = SubResource("AtlasTexture_qxqgu")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_q7e48")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -14,40 +42,95 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.211765, 0.211765, 0.211765, 0.690196)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Label" type="Label" parent="Control"]
+modulate = Color(0.47788, 0.47788, 0.47788, 1)
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -47.5
-offset_top = -33.0
-offset_right = 47.5
-offset_bottom = 33.0
+offset_left = -282.0
+offset_top = -158.0
+offset_right = -192.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "keskeytetty"
+
+[node name="ItemDescription" type="Label" parent="Control"]
+modulate = Color(0.47788, 0.47788, 0.47788, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -7.0
+offset_right = -66.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+text = "Health potion"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 66.0
+offset_right = 239.0
+offset_bottom = 154.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qda15")
+
+[node name="GridContainer" type="GridContainer" parent="Control/PanelContainer"]
+layout_mode = 2
+columns = 5
+script = ExtResource("3_8bw4e")
+data = ExtResource("4_xqphd")
+
+[node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_ws6m4")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_ws6m4")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_ws6m4")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_ws6m4")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_ws6m4")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_ws6m4")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -257.0
+offset_top = 95.0
+offset_right = -96.0
+offset_bottom = 135.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Button_Save" type="Button" parent="VBoxContainer"]
+[node name="Button_Save" type="Button" parent="Control/HBoxContainer"]
+custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-text = "Save"
+text = "tallenna"
 
-[node name="Button_Load" type="Button" parent="VBoxContainer"]
+[node name="Button_Load" type="Button" parent="Control/HBoxContainer"]
+custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-text = "Load"
-
-[node name="Label" type="Label" parent="."]
-modulate = Color(0.47788, 0.47788, 0.47788, 1)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -28.0
-offset_top = -58.0
-offset_right = 29.0
-offset_bottom = -35.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "paused"
+text = "sammuta"

@@ -1,0 +1,46 @@
+[gd_resource type="AudioBusLayout" load_steps=4 format=3 uid="uid://glf0vhfga83d"]
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_p7cae"]
+resource_name = "Distortion"
+pre_gain = -11.89
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_ohhwl"]
+resource_name = "Reverb"
+room_size = 0.97
+damping = 0.11
+spread = 0.35
+hipass = 0.11
+dry = 0.46
+wet = 0.49
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_m0vkl"]
+resource_name = "Compressor"
+threshold = -17.9
+ratio = 36.9
+gain = 19.6
+
+[resource]
+bus/1/name = &"Music"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = -15.795
+bus/1/send = &"Master"
+bus/2/name = &"SFX"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/3/name = &"SKITSO"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = -10.0692
+bus/3/send = &"Master"
+bus/3/effect/0/effect = SubResource("AudioEffectDistortion_p7cae")
+bus/3/effect/0/enabled = true
+bus/3/effect/1/effect = SubResource("AudioEffectReverb_ohhwl")
+bus/3/effect/1/enabled = true
+bus/3/effect/2/effect = SubResource("AudioEffectCompressor_m0vkl")
+bus/3/effect/2/enabled = true
