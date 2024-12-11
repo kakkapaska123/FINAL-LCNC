@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://rff0qf4opy4q" path="res://Enemies/Slime/slime.tscn" id="6_60j6r"]
 [ext_resource type="AudioStream" uid="uid://m5snrpncb6jl" path="res://Levels/music/Nothappymusic.mp3" id="7_6qabe"]
 [ext_resource type="PackedScene" uid="uid://736ru3hk0t1g" path="res://items/item_pickup/item_pickup.tscn" id="8_4kvh7"]
-[ext_resource type="Resource" uid="uid://bc6fu246tnyb8" path="res://items/stone.tres" id="9_whs2x"]
+[ext_resource type="Resource" uid="uid://kw20ftobxc8o" path="res://items/candy.tres" id="9_02ljx"]
 
 [node name="1" type="Node2D"]
 script = ExtResource("1_ikpga")
@@ -48,6 +48,12 @@ level = "res://playground.tscn"
 size = 4
 side = 3
 
+[node name="LevelTransition2" parent="." instance=ExtResource("6_0nvo5")]
+position = Vector2(192, 352)
+level = "res://playground.tscn"
+size = 4
+side = 3
+
 [node name="ItemPickup" parent="." instance=ExtResource("8_4kvh7")]
-position = Vector2(289, 127)
-item_data = ExtResource("9_whs2x")
+position = Vector2(198, 122)
+item_data = ExtResource("9_02ljx")

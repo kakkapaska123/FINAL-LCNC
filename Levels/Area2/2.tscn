@@ -31,9 +31,10 @@ layer_6/tile_data = PackedInt32Array(458765, 1966080, 3, 524301, 1966080, 4, 589
 position = Vector2(19, 271)
 
 [node name="LevelTransition2" parent="." instance=ExtResource("3_ph35b")]
-position = Vector2(353, 176)
+position = Vector2(337, 192)
 level = "res://Levels/Area3/3_talo.tscn"
 size = 1
+side = 2
 
 [node name="LevelTransition" parent="." instance=ExtResource("3_ph35b")]
 position = Vector2(0, 270)

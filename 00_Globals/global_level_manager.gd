@@ -37,6 +37,8 @@ func load_new_level(
 	
 	#await SceneTransition.fade_in()
 	
+	await get_tree().process_frame
+	
 	get_tree().paused = false
 	
 	await get_tree().process_frame

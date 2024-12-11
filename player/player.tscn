@@ -1,7 +1,7 @@
-[gd_scene load_steps=35 format=3 uid="uid://bvf4blw6dnanl"]
+[gd_scene load_steps=36 format=3 uid="uid://bvf4blw6dnanl"]
 
-[ext_resource type="Texture2D" uid="uid://bbcisor8uxq1u" path="res://player/assetit/bunny_animations.png" id="1_fxtwa"]
 [ext_resource type="Script" path="res://player/scriptit/player.gd" id="1_qbkno"]
+[ext_resource type="Texture2D" uid="uid://dnj4md43jajun" path="res://player/assetit/bunny_animations_all2.png" id="2_j5ko4"]
 [ext_resource type="Script" path="res://player/scriptit/player_state_machine.gd" id="3_cotr7"]
 [ext_resource type="Script" path="res://player/scriptit/state_idle.gd" id="4_7potc"]
 [ext_resource type="Script" path="res://player/scriptit/state_walk.gd" id="5_mqcab"]
@@ -278,6 +278,34 @@ tracks/0/keys = {
 "values": [30, 31, 32, 33, 34, 35]
 }
 
+[sub_resource type="Animation" id="Animation_ty2ch"]
+resource_name = "sattack_down"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [96, 99]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/AttackHurtBox:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 17)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ehtt1"]
 _data = {
 "RESET": SubResource("Animation_0l4nu"),
@@ -287,6 +315,7 @@ _data = {
 "idle_down": SubResource("Animation_lrcvf"),
 "idle_side": SubResource("Animation_vfoux"),
 "idle_up": SubResource("Animation_iwg1m"),
+"sattack_down": SubResource("Animation_ty2ch"),
 "stun_down": SubResource("Animation_jgpy3"),
 "stun_side": SubResource("Animation_py6e5"),
 "stun_up": SubResource("Animation_e1522"),
@@ -366,6 +395,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(1.2, 1.2)
 collision_mask = 16
 motion_mode = 1
 wall_min_slide_angle = 0.174533
@@ -377,9 +407,11 @@ shape = SubResource("CircleShape2D_h0db1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -17)
-texture = ExtResource("1_fxtwa")
+texture = ExtResource("2_j5ko4")
 hframes = 6
-vframes = 10
+vframes = 20
+region_enabled = true
+region_rect = Rect2(-4.155, -8.955, 288, 960)
 
 [node name="###AttackEffectSprite" type="Sprite2D" parent="Sprite2D"]
 

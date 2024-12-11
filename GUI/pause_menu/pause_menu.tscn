@@ -38,6 +38,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -159.0
+offset_top = -90.0
+offset_right = 113.0
+offset_bottom = 106.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.211765, 0.211765, 0.211765, 0.690196)
@@ -45,15 +49,13 @@ color = Color(0.211765, 0.211765, 0.211765, 0.690196)
 [node name="Label" type="Label" parent="Control"]
 modulate = Color(0.47788, 0.47788, 0.47788, 1)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -282.0
-offset_top = -158.0
-offset_right = -192.0
-offset_bottom = -135.0
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 244.0
+offset_top = 91.0
+offset_right = -242.0
+offset_bottom = -210.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "keskeytetty"
@@ -61,28 +63,32 @@ text = "keskeytetty"
 [node name="ItemDescription" type="Label" parent="Control"]
 modulate = Color(0.47788, 0.47788, 0.47788, 1)
 layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 207.0
+offset_top = 211.0
+offset_right = -205.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -230.0
-offset_top = -7.0
-offset_right = -66.0
-offset_bottom = 16.0
+offset_left = -98.0
+offset_top = -44.0
+offset_right = 98.0
+offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 10
-text = "Health potion"
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="Control"]
-layout_mode = 0
-offset_left = 43.0
-offset_top = 66.0
-offset_right = 239.0
-offset_bottom = 154.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_qda15")
 
 [node name="GridContainer" type="GridContainer" parent="Control/PanelContainer"]
@@ -111,26 +117,29 @@ layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -257.0
-offset_top = 95.0
-offset_right = -96.0
-offset_bottom = 135.0
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 381.0
+offset_top = 80.0
+offset_right = -147.0
+offset_bottom = -224.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Button_Save" type="Button" parent="Control/HBoxContainer"]
-custom_minimum_size = Vector2(75, 0)
+custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
+theme_override_font_sizes/font_size = 3
 text = "tallenna"
 
 [node name="Button_Load" type="Button" parent="Control/HBoxContainer"]
-custom_minimum_size = Vector2(75, 0)
+custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
-text = "sammuta"
+theme_override_font_sizes/font_size = 3
+text = "lataa"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+max_polyphony = 4

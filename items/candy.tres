@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://kw20ftobxc8o"]
+
+[ext_resource type="Script" path="res://items/item_effects/item_effect.gd" id="1_gcdbf"]
+[ext_resource type="Script" path="res://items/scripts/item_data.gd" id="2_o247w"]
+[ext_resource type="Texture2D" uid="uid://bsyahg4apnwqx" path="res://items/candy_02g.png" id="3_lbghg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44ade"]
+atlas = ExtResource("3_lbghg")
+
+[resource]
+script = ExtResource("2_o247w")
+name = "Karkki"
+description = "Mysteerinen karkki..."
+texture = SubResource("AtlasTexture_44ade")
+effects = Array[ExtResource("1_gcdbf")]([])
