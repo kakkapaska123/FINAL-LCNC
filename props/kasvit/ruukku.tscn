@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgp7fedu1r4ye"]
+
+[ext_resource type="Script" path="res://props/kasvit/plant.gd" id="1_3dqnv"]
+[ext_resource type="Texture2D" uid="uid://d385w1ajhehnl" path="res://tilemaps/assetit/Atlas-Props-sheet2.png" id="2_ufxmj"]
+[ext_resource type="PackedScene" uid="uid://nhbucydm3qi4" path="res://general/hitbox/hitbox.tscn" id="3_fxwhi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1c3ae"]
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vca75"]
+radius = 9.0
+height = 28.0
+
+[node name="Plant" type="Node2D"]
+script = ExtResource("1_3dqnv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("2_ufxmj")
+offset = Vector2(0, 1)
+region_enabled = true
+region_rect = Rect2(453, 2112, 23, 31)
+
+[node name="Hitbox" parent="." instance=ExtResource("3_fxwhi")]
+position = Vector2(0, -9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, -7)
+shape = SubResource("CapsuleShape2D_1c3ae")
+debug_color = Color(0.906227, 0.00012822, 0.744035, 0.42)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -9)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_vca75")

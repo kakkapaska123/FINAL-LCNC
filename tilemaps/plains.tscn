@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bvm31e2t6k24b"]
+[gd_scene load_steps=35 format=3 uid="uid://bvm31e2t6k24b"]
 
 [ext_resource type="Texture2D" uid="uid://d385w1ajhehnl" path="res://tilemaps/assetit/Atlas-Props-sheet2.png" id="1_fs7ci"]
 [ext_resource type="Texture2D" uid="uid://werkqna41u6a" path="res://tilemaps/assetit/cabin.png" id="2_5wgvk"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c7ptmlnb4s7mh" path="res://Levels/Area3/assetit/sCountertopBack01.png" id="6_xxqja"]
 [ext_resource type="Texture2D" uid="uid://dwxb6euyl4xqc" path="res://Levels/Area3/assetit/sFloor03.png" id="7_v7lkv"]
 [ext_resource type="Texture2D" uid="uid://d0fhcxbiwfk5j" path="res://Levels/Area3/assetit/sCountertopBack02.png" id="7_x5i6n"]
+[ext_resource type="Texture2D" uid="uid://bmsckha0xd3pi" path="res://tilemaps/assetit/liila.png" id="8_1r2an"]
 [ext_resource type="Texture2D" uid="uid://tsggdtlfmrcs" path="res://Levels/Area3/assetit/sWall02.png" id="8_mt71f"]
 [ext_resource type="Texture2D" uid="uid://cywmqmc8i3nyc" path="res://Levels/Area3/assetit/sWindows05.png" id="9_e6gjp"]
 [ext_resource type="Texture2D" uid="uid://dxj2ykmiyg627" path="res://Levels/Area3/assetit/top.png" id="10_wqt2u"]
@@ -2630,6 +2631,11 @@ texture = ExtResource("7_x5i6n")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nbibl"]
+texture = ExtResource("8_1r2an")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ectip"]
 texture = ExtResource("3_y3jbv")
@@ -5892,6 +5898,7 @@ sources/11 = SubResource("TileSetAtlasSource_1n4p8")
 sources/12 = SubResource("TileSetAtlasSource_xcywx")
 sources/13 = SubResource("TileSetAtlasSource_kx6bv")
 sources/14 = SubResource("TileSetAtlasSource_hwvrf")
+sources/15 = SubResource("TileSetAtlasSource_nbibl")
 
 [node name="Plains" type="TileMap"]
 z_index = -1

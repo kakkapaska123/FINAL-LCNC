@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://clt6oa4dgf7te"]
+
+[ext_resource type="Texture2D" uid="uid://d385w1ajhehnl" path="res://tilemaps/assetit/Atlas-Props-sheet2.png" id="2_x8ww8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0tw5c"]
+radius = 15.0
+height = 34.0
+
+[node name="Plant" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -20)
+texture = ExtResource("2_x8ww8")
+offset = Vector2(0, 1)
+region_enabled = true
+region_rect = Rect2(1290, 1921, 39, 59)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -9)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_0tw5c")
