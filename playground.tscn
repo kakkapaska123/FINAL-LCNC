@@ -72,7 +72,7 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_6887d")
 
 [node name="LevelTransition2" parent="." instance=ExtResource("4_gpk1c")]
-position = Vector2(288, 155)
+position = Vector2(289, 155)
 level = "res://Levels/Area2/2.tscn"
 size = 3
 side = 1

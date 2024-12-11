@@ -1,15 +1,13 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=8 format=3 uid="uid://m4rui4q1dkgs"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=7 format=3 uid="uid://m4rui4q1dkgs"]
 
 [ext_resource type="Script" path="res://items/scripts/item_data.gd" id="1_jv10n"]
 [ext_resource type="Script" path="res://items/item_effects/item_effect.gd" id="1_qmyro"]
 [ext_resource type="Texture2D" uid="uid://cj1ekfpvf42h0" path="res://items/sprites/items.png" id="2_gmcnu"]
-[ext_resource type="AudioStream" uid="uid://b51jhaio2otvg" path="res://items/item_effects/hp-up.wav" id="2_w71ux"]
 [ext_resource type="Script" path="res://items/item_effects/item_effect_heal.gd" id="3_ivrm2"]
 
 [sub_resource type="Resource" id="Resource_rabhp"]
 script = ExtResource("3_ivrm2")
 heal_amount = 1
-audio = ExtResource("2_w71ux")
 use_description = ""
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_66sfv"]
@@ -19,6 +17,6 @@ region = Rect2(32, 0, 32, 32)
 [resource]
 script = ExtResource("1_jv10n")
 name = "Potion"
-description = "Healing potion"
+description = "Parantava liemi"
 texture = SubResource("AtlasTexture_66sfv")
 effects = Array[ExtResource("1_qmyro")]([SubResource("Resource_rabhp")])

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c4im6qbp27tjd"]
+[gd_scene load_steps=11 format=3 uid="uid://c4im6qbp27tjd"]
 
 [ext_resource type="Script" path="res://Levels/scriptit/level.gd" id="1_ikpga"]
 [ext_resource type="PackedScene" uid="uid://bvm31e2t6k24b" path="res://tilemaps/plains.tscn" id="1_muawl"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://m5snrpncb6jl" path="res://Levels/music/Nothappymusic.mp3" id="7_6qabe"]
 [ext_resource type="PackedScene" uid="uid://736ru3hk0t1g" path="res://items/item_pickup/item_pickup.tscn" id="8_4kvh7"]
 [ext_resource type="Resource" uid="uid://kw20ftobxc8o" path="res://items/candy.tres" id="9_02ljx"]
+[ext_resource type="Resource" uid="uid://m4rui4q1dkgs" path="res://items/potion.tres" id="10_7cshp"]
 
 [node name="1" type="Node2D"]
 script = ExtResource("1_ikpga")
@@ -57,3 +58,7 @@ side = 3
 [node name="ItemPickup" parent="." instance=ExtResource("8_4kvh7")]
 position = Vector2(198, 122)
 item_data = ExtResource("9_02ljx")
+
+[node name="ItemPickup2" parent="." instance=ExtResource("8_4kvh7")]
+position = Vector2(139, 148)
+item_data = ExtResource("10_7cshp")

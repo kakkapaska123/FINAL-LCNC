@@ -99,3 +99,11 @@ func make_invulnerable( _duration : float = 1.0 ) -> void:
 	invulnerable = false
 	hit_box.monitoring = true
 	pass
+
+func schizo_sprite() -> void:
+	sprite.texture = load("res://player/assetit/pixil-frame-0_1.png")
+	
+
+func normal_sprite() -> void:
+	sprite.texture = load("res://player/assetit/bunny_animations.png")
+	

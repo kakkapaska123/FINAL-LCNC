@@ -1,7 +1,7 @@
 [gd_scene load_steps=36 format=3 uid="uid://bvf4blw6dnanl"]
 
+[ext_resource type="Texture2D" uid="uid://bbcisor8uxq1u" path="res://player/assetit/bunny_animations.png" id="1_fxtwa"]
 [ext_resource type="Script" path="res://player/scriptit/player.gd" id="1_qbkno"]
-[ext_resource type="Texture2D" uid="uid://dnj4md43jajun" path="res://player/assetit/bunny_animations_all2.png" id="2_j5ko4"]
 [ext_resource type="Script" path="res://player/scriptit/player_state_machine.gd" id="3_cotr7"]
 [ext_resource type="Script" path="res://player/scriptit/state_idle.gd" id="4_7potc"]
 [ext_resource type="Script" path="res://player/scriptit/state_walk.gd" id="5_mqcab"]
@@ -407,11 +407,11 @@ shape = SubResource("CircleShape2D_h0db1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -17)
-texture = ExtResource("2_j5ko4")
+texture = ExtResource("1_fxtwa")
 hframes = 6
 vframes = 20
 region_enabled = true
-region_rect = Rect2(-4.155, -8.955, 288, 960)
+region_rect = Rect2(0, 0, 288, 960)
 
 [node name="###AttackEffectSprite" type="Sprite2D" parent="Sprite2D"]
 

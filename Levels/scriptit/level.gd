@@ -13,3 +13,6 @@ func _ready() -> void:
 func _free_level() -> void:
 	PlayerManager.unparent_player( self )
 	queue_free()
+
+func change_modulate(new_color: Color) -> void:
+	self.modulate = new_color
